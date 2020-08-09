@@ -1,5 +1,6 @@
 package xyz.w190405.xyz.giveyouup.service
 
+import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Service
 
 @Service
@@ -7,7 +8,11 @@ class AuthService {
     private final val validArr: ArrayList<String> = ArrayList()
 
     init {
-        validArr.add("OQuD5uHju0JrywXX8g9rOQuD5uHju0JrywXX8g9r")
+        val keys: String = System.getenv("TOKENS") ?: "1234"
+
+        for(key in keys.split(',')){
+            validArr.add(key)
+        }
     }
 
     fun checkToken(token: String): Boolean{
