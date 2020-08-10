@@ -1,0 +1,27 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>HAHAHA</title>
+	<meta name="description" content="Never going to give you up">
+	<meta name="author" content="Never going to let you down">
+
+</head>
+
+<body>
+	<script>
+		fetch("https://giveyouup.gamerkids.dk:8443/access", {
+			method: "POST"
+		}).then(function (response) {
+			console.log('sent')
+			window.location.replace('https://youtu.be/dQw4w9WgXcQ');
+		}).catch(function (error) {
+			console.log(error.message)
+		})
+	</script>
+</body>
+
+</html>
