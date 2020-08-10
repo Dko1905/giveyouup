@@ -34,6 +34,7 @@ class AccessController(@Autowired val accessService: AccessService, @Autowired v
         }
     }
 
+    @CrossOrigin(origins = ["*"], allowedHeaders = ["*"])
     @GetMapping("/access")
     fun getAccess(): ResponseEntity<ArrayList<Access>>{
         try{
